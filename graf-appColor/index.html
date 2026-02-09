@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Selector de Color RGB</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS externo (SIN CAMBIOS) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="app-bg">
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card color-card p-4">
+        <h2 class="text-center mb-4 fw-bold">🎨 Selector de Color RGB</h2>
+
+        <!-- Color Picker -->
+        <div class="mb-4 text-center">
+            <input type="color"
+                   id="colorPicker"
+                   class="form-control form-control-color mx-auto"
+                   value="#000000">
+        </div>
+
+        <!-- ROJO -->
+        <div class="mb-3">
+            <label class="form-label">
+                Rojo (R): <span id="rVal">0</span>
+            </label>
+            <div class="d-flex gap-3">
+                <input type="range" class="form-range"
+                       min="0" max="255" value="0" id="red">
+                <input type="number" class="form-control"
+                       min="0" max="255" value="0" id="redNum">
+            </div>
+        </div>
+
+        <!-- VERDE -->
+        <div class="mb-3">
+            <label class="form-label">
+                Verde (G): <span id="gVal">0</span>
+            </label>
+            <div class="d-flex gap-3">
+                <input type="range" class="form-range"
+                       min="0" max="255" value="0" id="green">
+                <input type="number" class="form-control"
+                       min="0" max="255" value="0" id="greenNum">
+            </div>
+        </div>
+
+        <!-- AZUL -->
+        <div class="mb-3">
+            <label class="form-label">
+                Azul (B): <span id="bVal">0</span>
+            </label>
+            <div class="d-flex gap-3">
+                <input type="range" class="form-range"
+                       min="0" max="255" value="0" id="blue">
+                <input type="number" class="form-control"
+                       min="0" max="255" value="0" id="blueNum">
+            </div>
+        </div>
+
+        <!-- CUADRO DE COLOR -->
+        <div id="colorBox" class="color-preview my-4"></div>
+
+        <!-- VALORES -->
+        <div class="text-center">
+            <p class="mb-1">
+                <strong>RGB:</strong>
+                <span id="rgbValue">rgb(0, 0, 0)</span>
+            </p>
+            <p>
+                <strong>HEX:</strong>
+                <span id="hexValue">#000000</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- JS externo (SIN CAMBIOS) -->
+<script src="script.js"></script>
+
+</body>
+</html>
